@@ -134,6 +134,33 @@ print(res)
 )
 ```
 
+ту же задачу можно было вот так посчитать на питоне:
+
+```python
+ef bruteforce():
+    result = set()
+
+    for i in range(2, 100 + 1):
+        result.update([i**j for j in range(2, 100 + 1)])
+
+    print(len(result))
+
+
+def fast():
+    max = 100
+
+    def outcomes(max_exp):
+        s = set()
+        for k in range(1, max_exp + 1):
+            s.update(list([n*k for n in range(2, max + 1)]))
+        return s
+    
+    #            for base of 2      for base of 3      for base of 5, 6, 7, 10
+    duplicates = len(outcomes(6)) + len(outcomes(4)) + len(outcomes(2)) * 4
+
+    print(81 * 99 + duplicates)
+```
+
 # Выводы
 
 В этой лаборатороной работе я познакомилась с базовым синтаксисом comman lisp. 

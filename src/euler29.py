@@ -1,10 +1,10 @@
-def bruteforce():
-    result = set()
+# def bruteforce():
+#     result = set()
 
-    for i in range(2, 100 + 1):
-        result.update([i**j for j in range(2, 100 + 1)])
+#     for i in range(2, 100 + 1):
+#         result.update([i**j for j in range(2, 100 + 1)])
 
-    print(len(result))
+#     print(len(result))
 
 
 def fast():
@@ -27,8 +27,3 @@ def fast():
 
     # 81 other cases * 99 exponents + edge cases
     print(81 * 99 + duplicates)
-
-for i in range(2, 7):
-    for j in range(2, 7):
-        print(f"{i**j} ", end="")
-    print("\n")
